@@ -6,10 +6,10 @@
              x:Class="EndavaForms.Views.Calculadora"
              Title="{Binding Title}">
 
-    <Grid>
+    <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"></RowDefinition>
-            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
@@ -24,9 +24,13 @@
         </Grid.ColumnDefinitions>
 
         <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
-                Text="{Binding UltimaOperacion, Mode=OneWay}"></Label>
+               HorizontalTextAlignment="End"
+               FontSize="50"
+               Text="{Binding UltimaOperacion, Mode=OneWay}"></Label>
         <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4"
-                Text="{Binding SeleccionUsuario, Mode=OneWay}"></Label>
+               HorizontalTextAlignment="End"
+               FontSize="70"
+               Text="{Binding SeleccionUsuario, Mode=OneWay}"></Label>
 
         <Button Grid.Row="2" Grid.Column="0"
                     Text="CE" 
