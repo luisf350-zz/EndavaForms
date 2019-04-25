@@ -6,9 +6,9 @@ using System.Linq;
 
 namespace EndavaForms.ViewModels
 {
-    public class MainPageViewModel : BindableBase
+    public class CalculadoraViewModel : BindableBase
     {
-        public MainPageViewModel()
+        public CalculadoraViewModel()
         {
 
         }

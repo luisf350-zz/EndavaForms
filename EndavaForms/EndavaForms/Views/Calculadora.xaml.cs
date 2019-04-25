@@ -2,9 +2,9 @@
 
 namespace EndavaForms.Views
 {
-    public partial class MainPage : MasterDetailPage
+    public partial class Calculadora : ContentPage
     {
-        public MainPage()
+        public Calculadora()
         {
             InitializeComponent();
         }

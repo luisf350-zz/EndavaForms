@@ -30,6 +30,10 @@ namespace EndavaForms
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<Calculadora, CalculadoraViewModel>();
+            containerRegistry.RegisterForNavigation<ListaRest, ListaRestViewModel>();
+            containerRegistry.RegisterForNavigation<LocalDb, LocalDbViewModel>();
         }
     }
 }

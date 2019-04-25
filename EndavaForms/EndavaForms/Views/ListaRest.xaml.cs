@@ -2,9 +2,9 @@
 
 namespace EndavaForms.Views
 {
-    public partial class MainPage : MasterDetailPage
+    public partial class ListaRest : ContentPage
     {
-        public MainPage()
+        public ListaRest()
         {
             InitializeComponent();
         }
