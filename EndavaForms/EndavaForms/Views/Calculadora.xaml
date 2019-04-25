@@ -6,8 +6,113 @@
              x:Class="EndavaForms.Views.Calculadora"
              Title="{Binding Title}">
 
-    <StackLayout>
-        <Label Text="{Binding Title, Mode=OneWay}" />
-    </StackLayout>
-    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"
+                Text="{Binding UltimaOperacion, Mode=OneWay}"></Label>
+        <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4"
+                Text="{Binding SeleccionUsuario, Mode=OneWay}"></Label>
+
+        <Button Grid.Row="2" Grid.Column="0"
+                    Text="CE" 
+                    Command="{Binding OpcionCommand}"
+                    CommandParameter="CE"></Button>
+        <Button Grid.Row="2" Grid.Column="1"
+                    Text="C" 
+                    Command="{Binding OpcionCommand}"
+                    CommandParameter="C"></Button>
+        <Button Grid.Row="2" Grid.Column="2"
+                    Text="DEL" 
+                    Command="{Binding OpcionCommand}"
+                    CommandParameter="DEL"></Button>
+        <Button Grid.Row="2" Grid.Column="3"
+                    Text="/" 
+                    Command="{Binding OpcionCommand}"
+                    CommandParameter="/"></Button>
+
+        <Button Grid.Row="3" Grid.Column="0"
+                    Text="7" 
+                    Command="{Binding OpcionCommand}"
+                    CommandParameter="7"></Button>
+        <Button Grid.Row="3" Grid.Column="1"
+                    Text="8" 
+                    Command="{Binding OpcionCommand}"
+                    CommandParameter="8"></Button>
+        <Button Grid.Row="3" Grid.Column="2"
+                    Text="9" 
+                    Command="{Binding OpcionCommand}"
+                    CommandParameter="9"></Button>
+        <Button Grid.Row="3" Grid.Column="3"
+                    Text="*" 
+                    Command="{Binding OpcionCommand}"
+                    CommandParameter="*"></Button>
+
+        <Button Grid.Row="4" Grid.Column="0"
+                    Text="4" 
+                    Command="{Binding OpcionCommand}"
+                    CommandParameter="4"></Button>
+        <Button Grid.Row="4" Grid.Column="1"
+                    Text="5" 
+                    Command="{Binding OpcionCommand}"
+                    CommandParameter="5"></Button>
+        <Button Grid.Row="4" Grid.Column="2"
+                    Text="6" 
+                    Command="{Binding OpcionCommand}"
+                    CommandParameter="6"></Button>
+        <Button Grid.Row="4" Grid.Column="3"
+                    Text="-" 
+                    Command="{Binding OpcionCommand}"
+                    CommandParameter="-"></Button>
+
+        <Button Grid.Row="5" Grid.Column="0"
+                    Text="1" 
+                    Command="{Binding OpcionCommand}"
+                    CommandParameter="1"></Button>
+        <Button Grid.Row="5" Grid.Column="1"
+                    Text="2" 
+                    Command="{Binding OpcionCommand}"
+                    CommandParameter="2"></Button>
+        <Button Grid.Row="5" Grid.Column="2"
+                    Text="3" 
+                    Command="{Binding OpcionCommand}"
+                    CommandParameter="3"></Button>
+        <Button Grid.Row="5" Grid.Column="3"
+                    Text="+" 
+                    Command="{Binding OpcionCommand}"
+                    CommandParameter="+"></Button>
+
+        <Button Grid.Row="6" Grid.Column="0"
+                    Text="+-" 
+                    Command="{Binding OpcionCommand}"
+                    CommandParameter="+-"></Button>
+        <Button Grid.Row="6" Grid.Column="1"
+                    Text="0" 
+                    Command="{Binding OpcionCommand}"
+                    CommandParameter="0"></Button>
+        <Button Grid.Row="6" Grid.Column="2"
+                    Text="." 
+                    Command="{Binding OpcionCommand}"
+                    CommandParameter="."></Button>
+        <Button Grid.Row="6" Grid.Column="3"
+                    Text="=" 
+                    Command="{Binding OpcionCommand}"
+                    CommandParameter="="></Button>
+
+    </Grid>
+
 </ContentPage>
