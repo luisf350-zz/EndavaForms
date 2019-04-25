@@ -23,13 +23,12 @@ namespace EndavaForms
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("NavigationPage/MainPage");
+            await NavigationService.NavigateAsync(@"MainPage\NavigationPage\Calculadora");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
-            containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
             containerRegistry.RegisterForNavigation<Calculadora, CalculadoraViewModel>();
             containerRegistry.RegisterForNavigation<ListaRest, ListaRestViewModel>();

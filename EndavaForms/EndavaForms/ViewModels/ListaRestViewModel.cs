@@ -1,16 +1,17 @@
-﻿using Prism.Commands;
-using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Prism.Navigation;
 
 namespace EndavaForms.ViewModels
 {
-    public class ListaRestViewModel : BindableBase
+    public class ListaRestViewModel : ViewModelBase
     {
-        public ListaRestViewModel()
-        {
+        #region Constructor
 
+        public ListaRestViewModel(INavigationService navigationService) : base(navigationService)
+        {
+            Title = "Lista Rest";
         }
+
+        #endregion
+
     }
 }

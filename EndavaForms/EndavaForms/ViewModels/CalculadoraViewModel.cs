@@ -1,16 +1,17 @@
-﻿using Prism.Commands;
-using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Prism.Navigation;
 
 namespace EndavaForms.ViewModels
 {
-    public class CalculadoraViewModel : BindableBase
+    public class CalculadoraViewModel : ViewModelBase
     {
-        public CalculadoraViewModel()
-        {
+        #region Constructor
 
+        public CalculadoraViewModel(INavigationService navigationService) : base(navigationService)
+        {
+            Title = "Calculadora";
         }
+
+        #endregion
+
     }
 }

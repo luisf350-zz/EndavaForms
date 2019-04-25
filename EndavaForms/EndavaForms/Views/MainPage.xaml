@@ -9,7 +9,9 @@
         <ContentPage Title="Menu">
             <StackLayout Padding="20">
                 <!-- TODO: // Update the Layout and add some real menu items  -->
-                <Button Text="ViewA" Command="{Binding NavigateCommand}" CommandParameter="ViewA" />
+                <Button Text="Calculadora" Command="{Binding NavigateCommand}" CommandParameter="Calculadora" />
+                <Button Text="Lista Rest" Command="{Binding NavigateCommand}" CommandParameter="ListaRest" />
+                <Button Text="Local DB" Command="{Binding NavigateCommand}" CommandParameter="LocalDb" />
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>

@@ -3,6 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="EndavaForms.Views.Calculadora">
-  
+             x:Class="EndavaForms.Views.Calculadora"
+             Title="{Binding Title}">
+
+    <StackLayout>
+        <Label Text="{Binding Title, Mode=OneWay}" />
+    </StackLayout>
+    
 </ContentPage>
