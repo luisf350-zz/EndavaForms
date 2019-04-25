@@ -15,6 +15,8 @@ namespace EndavaForms.ViewModels
 
         private ObservableCollection<FotosDto> _registros;
 
+        private FotosDto _registroSeleccionado;
+
         #endregion
 
         #region Propiedades
@@ -23,6 +25,23 @@ namespace EndavaForms.ViewModels
         {
             get => _registros;
             set => SetProperty(ref _registros, value);
+        }
+
+        public FotosDto RegistroSeleccionado
+        {
+            get => _registroSeleccionado;
+            set
+            {
+                SetProperty(ref _registroSeleccionado, value);
+                if (_registroSeleccionado != null)
+                {
+                    NavigationParameters navigationParams = new NavigationParameters
+                    {
+                        { "RegistroSeleccionado", _registroSeleccionado }
+                    };
+                    NavigationService.NavigateAsync("RegistroRest", navigationParams);
+                }
+            }
         }
 
         #endregion
@@ -61,7 +80,7 @@ namespace EndavaForms.ViewModels
                 {
                     Registros.Add(lo);
                 }
-                
+
             }
             catch (Exception ex)
             {
