@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using Prism.Commands;
+﻿using Prism.Commands;
 using Prism.Navigation;
+using Prism.Services;
+using System.Collections.Generic;
 
 namespace EndavaForms.ViewModels
 {
@@ -51,7 +51,7 @@ namespace EndavaForms.ViewModels
 
         #region Constructor
 
-        public CalculadoraViewModel(INavigationService navigationService) : base(navigationService)
+        public CalculadoraViewModel(INavigationService navigationService, IPageDialogService dialogService) : base(navigationService, dialogService)
         {
             InstanciarObjetos();
         }
@@ -137,7 +137,7 @@ namespace EndavaForms.ViewModels
             }
         }
 
-        private void ManejoOperadores(string operadorSeleccioando)
+        private async void ManejoOperadores(string operadorSeleccioando)
         {
             if (operadorSeleccioando.Equals("+-"))
             {
@@ -177,7 +177,20 @@ namespace EndavaForms.ViewModels
                             resultado = (_opcionUno * _opcionDos).ToString();
                             break;
                         case "/":
-                            resultado = (_opcionUno / _opcionDos).ToString();
+                            if (_opcionDos.Equals(0))
+                            {
+                                await DialogService.DisplayAlertAsync("Validación", "La división por 0 no esta permitida", "OK");
+                                _opcionUno = double.NaN;
+                                _opcionDos = double.NaN;
+                                UltimaOperacion = string.Empty;
+                                SeleccionUsuario = string.Empty;
+                                _operador = string.Empty;
+                                return;
+                            }
+                            else
+                            {
+                                resultado = (_opcionUno / _opcionDos).ToString();
+                            }
                             break;
                     }
 

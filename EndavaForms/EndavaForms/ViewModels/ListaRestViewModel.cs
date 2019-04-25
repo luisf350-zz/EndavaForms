@@ -1,4 +1,5 @@
 ﻿using Prism.Navigation;
+using Prism.Services;
 
 namespace EndavaForms.ViewModels
 {
@@ -6,7 +7,7 @@ namespace EndavaForms.ViewModels
     {
         #region Constructor
 
-        public ListaRestViewModel(INavigationService navigationService) : base(navigationService)
+        public ListaRestViewModel(INavigationService navigationService, IPageDialogService dialogService) : base(navigationService, dialogService)
         {
             Title = "Lista Rest";
         }

@@ -1,4 +1,5 @@
 ﻿using Prism.Navigation;
+using Prism.Services;
 
 namespace EndavaForms.ViewModels
 {
@@ -6,7 +7,7 @@ namespace EndavaForms.ViewModels
     {
         #region Constructor
 
-        public LocalDbViewModel(INavigationService navigationService) : base(navigationService)
+        public LocalDbViewModel(INavigationService navigationService, IPageDialogService dialogService) : base(navigationService, dialogService)
         {
             Title = "Local DB";
         }

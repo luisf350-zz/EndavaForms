@@ -1,5 +1,6 @@
 ﻿using Prism.Mvvm;
 using Prism.Navigation;
+using Prism.Services;
 
 namespace EndavaForms.ViewModels
 {
@@ -13,7 +14,9 @@ namespace EndavaForms.ViewModels
 
         #region Propiedades
 
-        protected INavigationService NavigationService { get; private set; }
+        protected INavigationService NavigationService { get; }
+
+        protected IPageDialogService DialogService { get; }
 
         public string Title
         {
@@ -25,9 +28,10 @@ namespace EndavaForms.ViewModels
 
         #region Constructor
 
-        public ViewModelBase(INavigationService navigationService)
+        public ViewModelBase(INavigationService navigationService, IPageDialogService dialogService)
         {
             NavigationService = navigationService;
+            DialogService = dialogService;
         }
 
         #endregion

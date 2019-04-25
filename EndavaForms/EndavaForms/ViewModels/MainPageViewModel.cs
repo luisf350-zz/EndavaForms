@@ -1,5 +1,6 @@
 ﻿using Prism.Commands;
 using Prism.Navigation;
+using Prism.Services;
 
 namespace EndavaForms.ViewModels
 {
@@ -13,7 +14,7 @@ namespace EndavaForms.ViewModels
 
         #region Contructor
 
-        public MainPageViewModel(INavigationService navigationService) : base(navigationService)
+        public MainPageViewModel(INavigationService navigationService, IPageDialogService dialogService) : base(navigationService, dialogService)
         {
             InstanciarObjetos();
         }
