@@ -10,6 +10,8 @@ namespace EndavaForms.ViewModels
 
         private string _title;
 
+        private bool _isBusy;
+
         #endregion
 
         #region Propiedades
@@ -23,6 +25,13 @@ namespace EndavaForms.ViewModels
             get => _title;
             set => SetProperty(ref _title, value);
         }
+
+        public bool IsBusy
+        {
+            get => _isBusy;
+            set => SetProperty(ref _isBusy, value);
+        }
+
 
         #endregion
 

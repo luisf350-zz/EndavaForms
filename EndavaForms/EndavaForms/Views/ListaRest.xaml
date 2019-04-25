@@ -6,7 +6,17 @@
              x:Class="EndavaForms.Views.ListaRest"
              Title="{Binding Title}">
 
-    <StackLayout>
-        <Label Text="{Binding Title, Mode=OneWay}" />
-    </StackLayout>
+    <ListView Margin="10"
+              ItemsSource="{Binding Registros, Mode=OneWay}"
+              IsRefreshing="{Binding IsBusy, Mode=OneWay}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ImageCell
+                    Text="{Binding Title}"
+                    ImageSource="{Binding ThumbnailUrl}"></ImageCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        
+    </ListView>
+    
 </ContentPage>

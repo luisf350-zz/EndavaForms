@@ -128,11 +128,15 @@ namespace EndavaForms.ViewModels
                 _opcionDos = double.NaN;
                 SeleccionUsuario = string.Empty;
                 _operador = string.Empty;
+                UltimaOperacion = string.Empty;
                 return;
             }
             if (opcionUsuario.Equals("DEL"))
             {
-                SeleccionUsuario = SeleccionUsuario.Substring(0, SeleccionUsuario.Length - 1);
+                if (!string.IsNullOrEmpty(SeleccionUsuario))
+                {
+                    SeleccionUsuario = SeleccionUsuario.Substring(0, SeleccionUsuario.Length - 1);
+                }
                 return;
             }
         }
