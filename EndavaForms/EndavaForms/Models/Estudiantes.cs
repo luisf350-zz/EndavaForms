@@ -15,5 +15,7 @@ namespace EndavaForms.Models
         public DateTimeOffset FechaNacimiento { get; set; }
 
         public string NombreCompleto => $"{Nombre} {Apellido}";
+
+        public string FechaDeNacimiento => FechaNacimiento.Date.ToShortDateString();
     }
 }

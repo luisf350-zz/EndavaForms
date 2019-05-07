@@ -18,7 +18,7 @@
             <DataTemplate>
                 <TextCell
                     Text="{Binding NombreCompleto}"
-                    Detail="{Binding FechaNacimiento}"></TextCell>
+                    Detail="{Binding FechaDeNacimiento}"></TextCell>
             </DataTemplate>
         </ListView.ItemTemplate>
 
