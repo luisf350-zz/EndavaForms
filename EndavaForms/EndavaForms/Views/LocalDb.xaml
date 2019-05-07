@@ -6,7 +6,21 @@
              x:Class="EndavaForms.Views.LocalDb"
              Title="{Binding Title}">
 
-    <StackLayout>
-        <Label Text="{Binding Title, Mode=OneWay}" />
-    </StackLayout>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary" Text="Nuevo" Priority="0"
+                     Command="{Binding NuevoRegistroCommand}"/>
+    </ContentPage.ToolbarItems>
+
+    <ListView Margin="10"
+              ItemsSource="{Binding Registros, Mode=OneWay}"
+              IsRefreshing="{Binding IsBusy, Mode=OneWay}" >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell
+                    Text="{Binding NombreCompleto}"
+                    Detail="{Binding FechaNacimiento}"></TextCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+    </ListView>
 </ContentPage>
