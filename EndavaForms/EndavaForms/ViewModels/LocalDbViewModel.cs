@@ -48,8 +48,6 @@ namespace EndavaForms.ViewModels
             Title = "Local DB";
 
             NuevoRegistroCommand = new DelegateCommand(NuevoRegistro);
-
-            CargarRegistros();
         }
 
         private void CargarRegistros()
@@ -68,7 +66,12 @@ namespace EndavaForms.ViewModels
 
         private async void NuevoRegistro()
         {
-            await DialogService.DisplayAlertAsync("Nuevo Registro", "No se tiene implementación", "Ok");
+            await NavigationService.NavigateAsync("NuevoRegistro");
+        }
+
+        public override void OnNavigatedTo(INavigationParameters parameters)
+        {
+            CargarRegistros();
         }
 
         #endregion

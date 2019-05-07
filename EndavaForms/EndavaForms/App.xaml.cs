@@ -34,6 +34,7 @@ namespace EndavaForms
             containerRegistry.RegisterForNavigation<ListaRest, ListaRestViewModel>();
             containerRegistry.RegisterForNavigation<LocalDb, LocalDbViewModel>();
             containerRegistry.RegisterForNavigation<RegistroRest, RegistroRestViewModel>();
+            containerRegistry.RegisterForNavigation<NuevoRegistro, NuevoRegistroViewModel>();
         }
     }
 }
